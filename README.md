@@ -85,7 +85,7 @@ L'apprentissage supervisé peut être divisé en deux types de problèmes lors d
 
 Source: **ibm.com**
 
-_Illustration_
+_Illustration_  
 ![Illustration explicative de l'apprentissage supervisé](images/app_supervisé.png)
 
 ### **Apprentissage non-supervisé**
@@ -95,7 +95,7 @@ _Définition:_
 
 Source: **ibm.com**
 
-_Illustration_
+_Illustration_  
 ![Illustration explicative de l'apprentissage supervisé](images/app_nonsup.png)
 
 ### **Classification supervisée**
@@ -109,7 +109,7 @@ On dispose au départ d'un échantillon dit d'apprentissage dont le classement e
 
 Source: **Wikipedia**
 
-_Illustration_
+_Illustration_  
 ![Illustration explicative de la classification supervisé](images/class_sup.png)
 
 ### **Classification non supervisée**
@@ -147,7 +147,55 @@ En statistiques et en apprentissage automatique, la validation croisée (cross-v
 _Fonctionnement:_
 Dans un premier temps nous devons diviser les données en fonction du nombre de plis. Pour une validation croiée à 3 plus l'ensemble de données sera donc divisée en trois parties de taille plus ou moins égales. En suite le modèle est entraîné k fois, chaque fois en utilisant k-1 parties des données pour l'entraînement et la partie restante pour la validation. Ainsi, chaque partie des données sert exactement une fois comme ensemble de validation. Par exemple, dans une validation croisée à 5 plis, le modèle est entraîné 5 fois; chaque fois, 4 plis sont utilisés pour l'entraînement et 1 pli pour la validation. Puis on calcule l'erreur, à chaque itération, l'erreur de validation est calculée en utilisant l'ensemble de validation. Et pour terminer on calcule la moyenne de l'erreur après avoir effectué toutes les k itérations. Cette erreur moyenne sert d'estimation de la capacité du modèle à généraliser sur de nouvelles données.
 
-_Illustration_
+_Illustration_  
 ![Illustration explicative de la validation croisée](images/validation_croisee.png)
 
 ### **Données d'entrainement, de test et de validation**
+
+_Définitions & Usages:_
+
+**Données d'entrainement:**
+Un jeu de données d'apprentissage est un ensemble de données d'exemples utilisé pendant le processus d'apprentissage et est utilisé pour ajuster les paramètres d'un classificateur, par exemple.
+
+Pour les tâches de classification, un algorithme d'apprentissage supervisé examine le jeu de données d'apprentissage pour déterminer, ou apprendre, les combinaisons optimales de variables qui généreront un bon modèle prédictif. L'objectif est de produire un modèle entraîné (ajusté) qui se généralise bien aux nouvelles données inconnues. Le modèle ajusté est évalué à l'aide de « nouveaux » exemples issus des jeux de données conservés pour estimer la précision du modèle dans la classification de nouvelles données. Pour réduire le risque de problèmes tels que le sur-apprentissage, les exemples des jeux de données de validation et de test ne doivent pas être utilisés pour entraîner le modèle.
+
+La plupart des approches qui recherchent dans les données d'apprentissage des relations empiriques ont tendance à surajuster les données, ce qui signifie qu'elles peuvent identifier et exploiter des relations apparentes dans les données d'apprentissage qui ne sont pas valables en général.
+
+**Données de test:**
+Un jeu de données de test est un jeu de données indépendant du jeu de données d'apprentissage, mais qui suit la même distribution de probabilité que le jeu de données d'apprentissage. Si un modèle ajusté au jeu de données d'apprentissage s'adapte également bien au jeu de données de test, un surajustement minimal a eu lieu. Un meilleur ajustement du jeu de données d'apprentissage par opposition au jeu de données de test indique généralement un surajustement.
+
+Un jeu de test est donc un jeu d'exemples utilisés uniquement pour évaluer les performances d'un classificateur entièrement spécifié. Pour ce faire, le modèle final est utilisé pour prédire les classifications des exemples dans le jeu de test. Ces prédictions sont comparées aux véritables classifications des exemples pour évaluer la précision du modèle.
+
+Dans un scénario où les jeux de données de validation et de test sont utilisés, le jeu de données de test est généralement utilisé pour évaluer le modèle final sélectionné au cours du processus de validation. Dans le cas où le jeu de données d'origine est partitionné en deux sous-ensembles (jeu de données d'entraînement et de test), le jeu de données de test peut évaluer le modèle une seule fois.
+
+**Données de validation:**
+Un jeu de données de validation est un jeu de données d'exemples utilisés pour régler les hyperparamètres (c'est-à-dire l'architecture) d'un classifieur. Un exemple d'hyperparamètre pour les réseaux de neurones artificiels comprend le nombre d'unités cachées dans chaque couche. Celui-ci, ainsi que le jeu de test, doit suivre la même Loi de probabilité que le jeu de données d'apprentissage.
+
+Afin d'éviter le surapprentissage, lorsqu'un paramètre de classification doit être ajusté, il est nécessaire de disposer d'un jeu de données de validation en plus des jeux de données d'apprentissage et de test. Par exemple, si le classificateur le plus approprié pour le problème est recherché, le jeu de données d'apprentissage est utilisé pour entraîner les différents classificateurs candidats, le jeu de données de validation est utilisé pour comparer leurs performances et décider lequel prendre et, enfin, le jeu de test est utilisé pour obtenir les caractéristiques de performance telles que la précision, la sensibilité, la spécificité, la mesure F, etc. Le jeu de données de validation fonctionne comme un hybride : ce sont des données d'entraînement utilisées pour les tests, mais ni dans le cadre de la formation de bas niveau ni dans le cadre du test final.
+
+Une application de ce processus est en arrêt anticipé, où les modèles candidats sont des itérations successives du même réseau, et la formation s'arrête lorsque l'erreur sur le jeu de validation augmente, en choisissant le modèle précédent (celui avec l'erreur minimale).
+
+_Illustration_  
+![Illustration explicative de la validation croisée](images/data.jpeg)
+
+### **Corrélation linéaire**
+
+_Définition:_  
+Le coefficient de corrélation de Pearson, également connu sous le nom de coefficient r, est une mesure statistique qui définit la force de la relation entre deux variables et leur association l’une avec l’autre.
+En termes simples, le coefficient de corrélation de Pearson détermine tout changement dans une variable qui est influencé par l’autre variable liée. Le coefficient de corrélation de Pearson est influencé par le concept de covariance, ce qui en fait une meilleure méthode pour déterminer la relation et l’interdépendance entre les deux variables.
+
+_Illustration_  
+![Illustration explicative de la corrélation linéaire](images/pearson.svg)
+
+### **Fonction de coût**
+
+_Définition:_  
+Dans le domaine de l’intelligence artificielle, la fonction de perte ou de coût est la quantification de l’écart entre les prévisions du modèle et les observations réelles du jeu de donnée utilisé pendant l’entraînement.
+
+### **Déscente de gradient**
+
+_Définition:_  
+La descente de gradient est un algorithme d'optimisation couramment utilisé pour entraîner des modèles d'apprentissage automatique et des réseaux neuronaux. Les données d'entraînement aident ces modèles à apprendre au fil du temps, et la fonction de coût dans la descente de gradient agit spécifiquement comme un baromètre, évaluant sa précision à chaque itération des mises à jour des paramètres. Jusqu'à ce que la fonction soit proche de zéro ou égale à zéro, le modèle continue à ajuster ses paramètres pour obtenir l'erreur la plus faible possible. Une fois que les modèles d'apprentissage automatique sont optimisés et acquièrent une précision satisfaisante, ils peuvent se révéler des outils puissants pour l'intelligence artificielle (IA) et les applications informatiques.
+
+_Illustration_    
+![Illustration explicative de la déscente de gradient](images/gradient.jpg)
