@@ -44,7 +44,7 @@ La science des données sert à étudier les données de quatre principales mani
 
 Source: **Amazon Web Services**
 
-*Illustration*  
+_Illustration_  
 ![Illustration explicative de la Data Science](images/datasciences.png)
 
 ### **L'apprentissage automatique & l'apprentissage profond (Machine Learning & Deep Learning)**
@@ -52,10 +52,25 @@ Source: **Amazon Web Services**
 _Définitions:_  
 **Le Machine Learning** ou apprentissage automatique est un domaine scientifique, et plus particulièrement une sous-catégorie de l’intelligence artificielle. Elle consiste à laisser des algorithmes découvrir des « patterns », à savoir des motifs récurrents, dans les ensembles de données. Ces données peuvent être des chiffres, des mots, des images, des statistiques…
 
-Source: **datascientest.com**
-
 **Le Deep Learning** quant à lui est un sous-ensemble du Machine Learning où les réseaux neuronaux artificiels - des algorithmes conçus pour fonctionner comme le cerveau humain - apprennent à partir d'un grand nombre de données.
 
-Source: **oracle.com**
 
-_Comment tout cela fonctionne t'il ?_
+_Comment tout cela fonctionne t'il ?_  
+Le fonctionnement du **Machine Learning** repose sur 4 étapes principales:
+
+1. Sélectionner et préparer un ensemble de données d'entrainement qui seront utilisées pour nourrir le modèle de Machine Learning pour apprendre à résoudre des problèmes pour lequel il est conçu.  
+   Les données peuvent être étiquettées (labelisées) pour indiquer au modèle les caractéristiques qu'il devra identifier. Si elles ne sont pas étiquettées le modèle devra repérer et extraire les caractéristiques récurrentes de lui même.
+
+2. Sélectionner un algorithme a éxécuter sur l'ensemble des données d'entrainement. Le choix dépend du type et du volume des données d'entrainement et du type de problème à résoudre.
+
+3.Entrainer l'algorithme. C'est un processus itératif. Des variables sont exécutées à travers l'algorithme et les résultats sont comparés avec ceux qu'il aurait pu produire. Les poids et le biais peuvent ensuite être ajustés pour accroître la précision du résultat. On exécute ensuite de nouveau les variables jusqu’à ce que l’algorithme produise le résultat correct la plupart du temps. L’algorithme, ainsi entraîné, est le modèle de Machine Learning.
+
+4. Utiliser et améliorer le modèle. On utilise le modèle sur de nouvelles données, dont la provenance dépend du problème à résoudre.Par exemple, un modèle de Machine Learning conçu pour détecter les spams sera utilisé sur des emails.
+
+
+Le **Deep Learning** est alimenté par des couches de réseaux neuronaux, qui sont des algorithmes vaguement modelés sur le fonctionnement du cerveau humain. L'entraînement avec de grandes quantités de données permet de configurer les neurones du réseau neuronal. Le résultat est un modèle de deep learning qui, une fois entraîné, traite de nouvelles données. Les modèles de deep learning recueillent des informations provenant de plusieurs sources de données et analysent ces données en temps réel, sans intervention humaine. Dans le cadre du deep learning, les processeurs graphiques (GPU) sont optimisés pour la formation de modèles, car ils peuvent traiter plusieurs calculs simultanément.
+
+Sources: **datascientest.com & oracle.com**
+
+_Illustration_  
+![Illustration explicative du ML & DL](images/mldl.png)
