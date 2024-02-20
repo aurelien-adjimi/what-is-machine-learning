@@ -130,13 +130,13 @@ La régression est utilisée pour comprendre la relation entre les variables dé
 
 Source: **Amazon Web Services**
 
-**La régression linéaire:**
+**La régression linéaire:**  
 ![Illustration explicative de la régression linéaire](images/regression_lineaire.webp)
 
-**La régression logistique:**
+**La régression logistique:**  
 ![Illustration explicative de la régression logistique](images/logistic-regression-model.png)
 
-**La régression polynomiale:**
+**La régression polynomiale:**  
 ![Illustration explicative de la régression polynomiale](images/regression_poly.svg)
 
 ### **Validation Croisée**
