@@ -10,7 +10,7 @@ Les notions sur lesquelles nous devons réaliser cette veille sont les suivantes
 - [ ] L'apprentissage suprvisé
 - [ ] L'apprentissage non-supervisé
 - [ ] La classification supervisée
-- [ ] La classification on-supervisée
+- [ ] La classification non supervisée
 - [ ] La régression
 - [ ] La validation croisée
 - [ ] Les données d’entraînement, les données de test et de validation
@@ -197,5 +197,5 @@ Dans le domaine de l’intelligence artificielle, la fonction de perte ou de co�
 _Définition:_  
 La descente de gradient est un algorithme d'optimisation couramment utilisé pour entraîner des modèles d'apprentissage automatique et des réseaux neuronaux. Les données d'entraînement aident ces modèles à apprendre au fil du temps, et la fonction de coût dans la descente de gradient agit spécifiquement comme un baromètre, évaluant sa précision à chaque itération des mises à jour des paramètres. Jusqu'à ce que la fonction soit proche de zéro ou égale à zéro, le modèle continue à ajuster ses paramètres pour obtenir l'erreur la plus faible possible. Une fois que les modèles d'apprentissage automatique sont optimisés et acquièrent une précision satisfaisante, ils peuvent se révéler des outils puissants pour l'intelligence artificielle (IA) et les applications informatiques.
 
-_Illustration_    
+_Illustration_  
 ![Illustration explicative de la déscente de gradient](images/gradient.jpg)
